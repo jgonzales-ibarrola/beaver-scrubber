@@ -128,7 +128,7 @@ export default function BookingSection() {
         >
           <h2 className="text-4xl font-bold mb-4">Book Your Service</h2>
           <p className="text-primary/80 max-w-xl mx-auto">
-            Quick and easy scheduling. Tell us what you need, and we'll handle the rest.
+            Quick and easy scheduling. Tell us what you need, and we&apos;ll handle the rest.
           </p>
         </motion.div>
 
