@@ -111,29 +111,30 @@ export default function AboutSection() {
 									</p>
 								</div>
 								<div className="aspect-video overflow-hidden rounded-lg">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.437320654199!2d121.61319217590238!3d13.942083686511854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ddedff9999b413%3A0x7f3c0c4ff5db6f76!2sXJ55%2BQW4!5e0!3m2!1sen!2sph!4v1678532101234!5m2!1sen!2sph"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-<div className="text-center mt-4">
-  <Button className="bg-secondary text-primary hover:bg-secondary/80" asChild>
-    <Link
-      href="https://www.google.com/maps/dir/?api=1&destination=XJ55+QW4,Lucena+City,Quezon+Province,Philippines"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Get Directions
-    </Link>
-  </Button>
-</div>
-
-
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.437320654199!2d121.61319217590238!3d13.942083686511854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ddedff9999b413%3A0x7f3c0c4ff5db6f76!2sXJ55%2BQW4!5e0!3m2!1sen!2sph!4v1678532101234!5m2!1sen!2sph"
+										width="100%"
+										height="100%"
+										style={{ border: 0 }}
+										allowFullScreen
+										loading="lazy"
+										referrerPolicy="no-referrer-when-downgrade"
+									></iframe>
+								</div>
+								<div className="text-center mt-4">
+									<Button
+										className="bg-secondary text-primary hover:bg-secondary/80"
+										asChild
+									>
+										<Link
+											href="https://www.google.com/maps/dir/?api=1&destination=XJ55+QW4,Lucena+City,Quezon+Province,Philippines"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Get Directions
+										</Link>
+									</Button>
+								</div>
 							</CardContent>
 						</Card>
 					</motion.div>
