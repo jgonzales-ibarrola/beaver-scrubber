@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: 'Beaver Scrubber Cleaning Company <onboarding@resend.dev>',
-      to: ['jgonzales.ibarrola@gmail.com'],
+      to: ['beaverscrubberco@gmail.com'],
       subject: 'New Request for CLEANING!',
       html: emailHtml, // ✅ use html instead of react
     });
