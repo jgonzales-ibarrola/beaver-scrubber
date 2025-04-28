@@ -1,7 +1,7 @@
-import { EmailTemplate } from '@/components/email-template';
 import { NextRequest } from 'next/server';
 import { Resend } from 'resend';
-import { render } from '@react-email/render'; // <-- add this
+import { render } from '@react-email/render';
+import { ContactTemplate } from '@/components/contact-template';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,28 +9,22 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const { name, email, phone, address, date, time, serviceType, serviceDetails, additionalNotes } = body;
+    const { name, email, phone, message } = body;
 
-    // ✅ Render EmailTemplate to HTML string first
     const emailHtml = await render(
-      EmailTemplate({
+      ContactTemplate({
         name,
         email,
         phone,
-        address,
-        date,
-        time,
-        serviceType,
-        serviceDetails,
-        additionalNotes,
+        message,
       })
     );
 
     const { data, error } = await resend.emails.send({
       from: 'Beaver Scrubber Cleaning Company <onboarding@resend.dev>',
       to: ['jgonzales.ibarrola@gmail.com'],
-      subject: 'New Request for CLEANING!',
-      html: emailHtml, // ✅ use html instead of react
+      subject: 'New Contact Message!',
+      html: emailHtml,
     });
 
     if (error) {
