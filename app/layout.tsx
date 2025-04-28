@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/nav-bar";
 import { Toaster } from 'react-hot-toast';
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Beaver Scrubber",
@@ -23,6 +24,7 @@ export default function RootLayout({
         }} />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
