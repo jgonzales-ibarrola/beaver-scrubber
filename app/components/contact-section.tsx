@@ -40,6 +40,7 @@ export default function ContactSection() {
         toast.error("Failed to send the message. Please try again.");
       }
     } catch (error) {
+			console.error(error);
       toast.error("An error occurred while sending the message.");
     }
 
