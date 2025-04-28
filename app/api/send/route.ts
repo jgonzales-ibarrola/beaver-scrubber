@@ -1,7 +1,7 @@
-
 import { EmailTemplate } from '@/components/email-template';
 import { NextRequest } from 'next/server';
 import { Resend } from 'resend';
+import { render } from '@react-email/render'; // <-- add this
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,11 +11,26 @@ export async function POST(req: NextRequest) {
 
     const { name, email, phone, address, date, time, serviceType, serviceDetails, additionalNotes } = body;
 
+    // ✅ Render EmailTemplate to HTML string first
+    const emailHtml = await render(
+      EmailTemplate({
+        name,
+        email,
+        phone,
+        address,
+        date,
+        time,
+        serviceType,
+        serviceDetails,
+        additionalNotes,
+      })
+    );
+
     const { data, error } = await resend.emails.send({
       from: 'Beaver Scrubber Cleaning Company <onboarding@resend.dev>',
       to: ['beaverscrubberco@gmail.com'],
       subject: 'New Request for CLEANING!',
-      react: EmailTemplate({ name, email, phone, address, date, time, serviceType, serviceDetails, additionalNotes }),
+      html: emailHtml, // ✅ use html instead of react
     });
 
     if (error) {
@@ -27,3 +42,4 @@ export async function POST(req: NextRequest) {
     return Response.json({ error }, { status: 500 });
   }
 }
+  
