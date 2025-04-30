@@ -118,7 +118,7 @@ export default function ContactSection() {
             className="space-y-6"
           >
             <Link
-              href="https://www.google.com/maps/dir/?api=1&destination=XJ55+QW4,Lucena+City,Quezon+Province,Philippines"
+              href="https://maps.app.goo.gl/MBXXrSoF6cPFWxDK6"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-start gap-4"
