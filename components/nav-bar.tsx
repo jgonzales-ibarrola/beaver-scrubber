@@ -10,16 +10,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-brown text-white shadow-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 text-primary">
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-2xl font-bold tracking-tight">Beaver Scrubber</span>
+            <span className="text-2xl font-bold tracking-tight text-white">Beaver Scrubber</span>
           </motion.div>
         </Link>
 
@@ -29,7 +29,7 @@ export default function Navbar() {
             <Link
               key={section}
               href={`#${section}`}
-              className="hover:text-primary transition-colors duration-200"
+              className="hover:text-white/80 transition-colors duration-200"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>

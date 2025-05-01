@@ -48,7 +48,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary">
+    <section id="contact" className="py-20 bg-brown">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,10 +57,10 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Contact Us
           </h2>
-          <p className="text-primary/80 max-w-2xl mx-auto">
+          <p className="text-white/80 max-w-2xl mx-auto">
             Have questions or ready to book? Get in touch with us.
           </p>
         </motion.div>
@@ -127,8 +127,8 @@ export default function ContactSection() {
                 <MapPin className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg text-primary">Our Location</h3>
-                <p className="text-primary/80">
+                <h3 className="font-semibold text-lg text-white">Our Location</h3>
+                <p className="text-white/80">
                   XJ55+QW4, Quezon Ave., Brgy. Gulang-Gulang, Lucena City, Quezon Province, Philippines
                 </p>
               </div>
@@ -139,8 +139,8 @@ export default function ContactSection() {
                 <Phone className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg text-primary">Phone</h3>
-                <p className="text-primary/80">+63 915 2877 486</p>
+                <h3 className="font-semibold text-lg text-white">Phone</h3>
+                <p className="text-white/80">+63 915 2877 486</p>
               </div>
             </div>
 
@@ -149,23 +149,23 @@ export default function ContactSection() {
                 <Mail className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg text-primary">Email</h3>
-                <p className="text-primary/80">beaverscrubberco@gmail.com</p>
+                <h3 className="font-semibold text-lg text-white">Email</h3>
+                <p className="text-white/80">beaverscrubberco@gmail.com</p>
               </div>
             </div>
 
             <div className="pt-6">
-              <h3 className="font-semibold text-lg text-primary mb-4">Follow Us</h3>
+              <h3 className="font-semibold text-lg text-white mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <Link
                   href="#"
-                  className="bg-primary p-3 rounded-full text-white hover:bg-primary/20 transition-colors"
+                  className="bg-primary p-3 rounded-full text-white hover:bg-primary/70 transition-colors"
                 >
                   <Facebook className="h-6 w-6" />
                 </Link>
                 <Link
                   href="#"
-                  className="bg-primary p-3 rounded-full text-white hover:bg-primary/20 transition-colors"
+                  className="bg-primary p-3 rounded-full text-white hover:bg-primary/70 transition-colors"
                 >
                   <Instagram className="h-6 w-6" />
                 </Link>

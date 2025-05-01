@@ -1,26 +1,29 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[url(/home/hero-banner.png)] bg-cover bg-center">
-      {/* Background Overlay for Darkening Effect */}
-      <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center bg-[url('/home/hero-banner.png')] overflow-hidden">
+      {/* Watery Overlay Blob */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-300/30 via-transparent to-brown-700/30 animate-pulse blur-2xl z-0 pointer-events-none" />
 
-      {/* Content */}
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
+
+      {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-white dark:text-[#f3f4f6]"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-white"
         >
-          Transform Your Space <br />
-          <span className="text-[#fcdf5b]">
-            with Professional Cleaning
+          <span className="text-blue-500">Transform</span> Your Space  <br />
+          <span className="bg-gradient-to-r from-[#fcdf5b] to-[#fd944f] bg-clip-text text-transparent">
+            with Professional Cleaning 
           </span>
         </motion.h1>
 
@@ -28,11 +31,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-white dark:text-[#e2e8f0]"
+          className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-white/90"
         >
-          Delivering pristine results for homes and businesses in
-          Lucena City, Quezon Province — trusted, reliable, and
-          affordable cleaning services.
+          Delivering pristine results for homes and businesses in Lucena City, Quezon Province - trusted, reliable, and affordable cleaning services.
         </motion.p>
 
         <motion.div
@@ -44,7 +45,7 @@ export default function Hero() {
           <Button
             asChild
             size="lg"
-            className="text-lg px-8 py-6 bg-[#fcdf5b] hover:bg-[#fd944f] text-primary"
+            className="text-lg px-8 py-6 bg-[#fcdf5b] hover:bg-[#fd944f] text-primary font-semibold shadow-md"
           >
             <Link href="#booking">Book an Appointment</Link>
           </Button>
@@ -52,7 +53,7 @@ export default function Hero() {
             asChild
             size="lg"
             variant="outline"
-            className="text-lg px-8 py-6 border-[#fd944f] text-primary hover:bg-white/80"
+            className="text-lg px-8 py-6 border-white/30 text-primary hover:bg-white/10 hover:text-white transition"
           >
             <Link href="#services">View Services</Link>
           </Button>

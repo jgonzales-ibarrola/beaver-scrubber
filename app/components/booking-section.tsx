@@ -117,7 +117,7 @@ export default function BookingSection() {
   };
 
   return (
-    <section id="booking" className="py-24 bg-secondary">
+    <section id="booking" className="py-24 bg-brown">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -126,8 +126,8 @@ export default function BookingSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Book Your Service</h2>
-          <p className="text-primary/80 max-w-xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-white">Book Your Service</h2>
+          <p className="text-white/80 max-w-xl mx-auto">
             Quick and easy scheduling. Tell us what you need, and we&apos;ll handle the rest.
           </p>
         </motion.div>
