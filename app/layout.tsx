@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     siteName: "Beaver Scrubber",
     images: [
       {
-        url: "https://beaver-scrubber.vercel.app/", // Replace with actual Open Graph image
-        width: 1200,
-        height: 630,
-        alt: "Beaver Scrubber - Cleaning and Power Washing Services",
+        url: "https://beaver-scrubber.vercel.app/logo.png", // Replace with actual Open Graph image
+        width: 539,
+        height: 463,
+        alt: "Beaver Scrubber Logo",
       },
     ],
     type: "website",
