@@ -9,8 +9,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-semibold mb-4">Beaver Scrubber Cleaning Co.</h3>
             <p className="text-gray-400 mb-6 max-w-md">
-              Providing professional cleaning and power washing services for residential buildings in Lucena City, Quezon
-              Province, Philippines.
+              Providing professional cleaning and power washing services in Lucena City, Quezon Province, Philippines.
             </p>
             <div className="flex gap-6">
               <Link href="#" className="text-gray-400 hover:text-blue-600 transition duration-300">

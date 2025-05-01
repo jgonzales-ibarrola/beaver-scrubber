@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-white"
         >
-          <span className="text-blue-500">Transform</span> Your Space  <br />
+          Transform Your Space  <br />
           <span className="bg-gradient-to-r from-[#fcdf5b] to-[#fd944f] bg-clip-text text-transparent">
             with Professional Cleaning 
           </span>

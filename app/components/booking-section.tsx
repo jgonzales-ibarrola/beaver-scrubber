@@ -199,7 +199,7 @@ export default function BookingSection() {
                             <RadioGroupItem value={type} id={type} className="peer sr-only" />
                             <Label
                               htmlFor={type}
-                              className="flex flex-col items-center justify-center border-2 border-muted rounded-lg p-4 peer-data-[state=checked]:border-primary transition"
+                              className="flex flex-col items-center justify-center border-2 border-primary/20 rounded-lg p-4 peer-data-[state=checked]:border-primary transition"
                             >
                               <CheckCircle2 className="h-6 w-6 mb-2" />
                               {type === "cleaning" ? "Cleaning" : "Power Washing"}
@@ -214,7 +214,7 @@ export default function BookingSection() {
                         <Label>Date</Label>
                         <Popover>
                           <PopoverTrigger asChild>
-                            <Button variant="outline" className={cn("w-full justify-start", !date && "text-muted-foreground")}>
+                            <Button variant="outline" className={cn("w-full justify-start border-primary", !date && "text-muted-foreground")}>
                               <CalendarIcon className="mr-2 h-4 w-4" />
                               {date ? format(date, "PPP") : "Pick a date"}
                             </Button>

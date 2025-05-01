@@ -19,6 +19,7 @@ export default function AboutSection() {
 	return (
 		<section id="about" className="py-20 bg-gray-100">
 			<div className="container mx-auto px-4">
+				{/* Section Title */}
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -26,14 +27,17 @@ export default function AboutSection() {
 					viewport={{ once: true }}
 					className="text-center mb-16"
 				>
-					<h2 className="text-4xl font-bold mb-4">About Us</h2>
-					<p className="text-primary/80 text-lg max-w-2xl mx-auto">
+					<h2 className="text-4xl md:text-5xl font-bold mb-3">
+						About Us
+					</h2>
+					<p className="text-primary/80 text-base md:text-lg max-w-xl mx-auto">
 						Discover who we are and what we stand for at Beaver
 						Scrubber Cleaning Co.
 					</p>
 				</motion.div>
 
 				<div className="grid md:grid-cols-2 gap-10 items-start">
+					{/* Our Story */}
 					<motion.div
 						initial={{ opacity: 0, x: -40 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -45,33 +49,32 @@ export default function AboutSection() {
 								<CardTitle className="text-2xl">
 									Our Story
 								</CardTitle>
-								<CardDescription className="text-primary/80">
+								<CardDescription className="text-muted-foreground text-sm">
 									Built on quality, trust, and care.
 								</CardDescription>
 							</CardHeader>
-							<CardContent className="space-y-6">
-								<TextGenerateEffect words={aboutText} />
+							<CardContent className="space-y-6 text-sm text-gray-700 leading-relaxed">
+								<TextGenerateEffect
+									words={aboutText}
+									className="text-muted-foreground"
+								/>
 								<Separator />
 								<div>
 									<h3 className="text-lg font-semibold mb-4">
-										Our Core Values
+										Core Values We Live By
 									</h3>
-									<ul className="space-y-3">
+									<ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-muted-foreground text-sm">
 										{[
 											"Dedication",
 											"Cooperation",
 											"Adaptability",
 											"Resourcefulness",
 											"Environmental Stewardship",
+											"Attention to Detail",
 										].map((value) => (
-											<li
-												key={value}
-												className="flex items-center gap-3"
-											>
+											<li key={value} className="flex items-center gap-2">
 												<span className="h-2.5 w-2.5 rounded-full bg-primary"></span>
-												<span className="text-muted-foreground">
-													{value}
-												</span>
+												{value}
 											</li>
 										))}
 									</ul>
@@ -80,6 +83,7 @@ export default function AboutSection() {
 						</Card>
 					</motion.div>
 
+					{/* Location Card */}
 					<motion.div
 						initial={{ opacity: 0, x: 40 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -91,23 +95,22 @@ export default function AboutSection() {
 								<CardTitle className="text-2xl">
 									Our Location
 								</CardTitle>
-								<CardDescription className="text-primary/80">
+								<CardDescription className="text-muted-foreground text-sm">
 									Located in the heart of Lucena City
 								</CardDescription>
 							</CardHeader>
-							<CardContent className="space-y-6">
-								<div className="space-y-4 text-primary/80">
+							<CardContent className="space-y-5 text-sm text-muted-foreground leading-relaxed">
+								<div>
 									<p>
 										Our headquarters is located at XJ55+QW4,
 										Quezon Ave., Brgy. Gulang-Gulang, Lucena
 										City, Quezon Province, Philippines.
 									</p>
-									<p>
-										Positioned along major highways and near
-										the diversion road, we ensure fast,
-										accessible service delivery to our
-										clients and high visibility to future
-										customers.
+									<p className="mt-2">
+										We’re positioned along key highways and
+										near the diversion road — making our
+										services fast, accessible, and visible
+										to the community.
 									</p>
 								</div>
 								<div className="aspect-video overflow-hidden rounded-lg">
@@ -121,7 +124,7 @@ export default function AboutSection() {
 										referrerPolicy="no-referrer-when-downgrade"
 									></iframe>
 								</div>
-								<div className="text-center mt-4">
+								<div className="text-center">
 									<Button
 										className="bg-secondary text-primary hover:bg-secondary/80"
 										asChild
