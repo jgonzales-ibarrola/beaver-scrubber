@@ -12,17 +12,13 @@ export default function Footer() {
               Providing professional cleaning and power washing services in Lucena City, Quezon Province, Philippines.
             </p>
             <div className="flex gap-6">
-              <Link href="#" className="text-gray-400 hover:text-blue-600 transition duration-300">
+              <Link href="https://www.facebook.com/profile.php?id=61576119441266" target="_blank" className="text-gray-400 hover:text-blue-600 transition duration-300">
                 <Facebook className="h-6 w-6" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-blue-600 transition duration-300">
+              <Link href="https://www.instagram.com/beaverscrubbercleaningco/" target="_blank" className="text-gray-400 hover:text-blue-600 transition duration-300">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-blue-600 transition duration-300">
-                <MessageSquare className="h-6 w-6" />
-                <span className="sr-only">Messenger</span>
               </Link>
             </div>
           </div>

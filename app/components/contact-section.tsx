@@ -158,13 +158,15 @@ export default function ContactSection() {
               <h3 className="font-semibold text-lg text-white mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <Link
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61576119441266"
+                  target="_blank"
                   className="bg-primary p-3 rounded-full text-white hover:bg-primary/70 transition-colors"
                 >
                   <Facebook className="h-6 w-6" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/beaverscrubbercleaningco/"
+                  target="_blank"
                   className="bg-primary p-3 rounded-full text-white hover:bg-primary/70 transition-colors"
                 >
                   <Instagram className="h-6 w-6" />
