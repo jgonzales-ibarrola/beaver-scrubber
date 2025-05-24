@@ -194,7 +194,7 @@ export default function BookingSection() {
                     <div className="space-y-2">
                       <Label>Service Type</Label>
                       <RadioGroup value={serviceType} onValueChange={handleServiceTypeChange} className="grid grid-cols-3 gap-4">
-                        {["cleaning", "power-washing", "upholstery-shampooing"].map((type, idx) => (
+                        {["cleaning", "power-washing", "upholstery-shampooing"].map((type) => (
                           <div key={type}>
                             <RadioGroupItem value={type} id={type} className="peer sr-only" />
                             <Label

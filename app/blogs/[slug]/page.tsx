@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 const blogContent: Record<
@@ -55,19 +56,25 @@ const blogContent: Record<
 	}
 };
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-	const blog = blogContent[params.slug];
+export default async function BlogDetailPage({ params }: { params:  Promise<{ slug: string }> }) {
+	const {slug} = await params;
+	const blog = blogContent[slug];
 	if (!blog) return notFound();
 
 	return (
 		<section className="min-h-screen bg-white py-20 px-4 md:px-6 lg:px-8">
 			<div className="max-w-3xl mx-auto">
 				{blog.image && (
-					<img
-						src={blog.image}
-						alt={blog.title}
-						className="rounded-xl mb-10 w-full object-cover h-64"
-					/>
+					<div className="relative w-full h-64 mb-10 rounded-xl overflow-hidden">
+						<Image
+							src={blog.image}
+							alt={blog.title}
+							fill
+							className="object-cover"
+							sizes="(max-width: 768px) 100vw, 768px"
+							priority
+						/>
+					</div>
 				)}
 
 				<header className="mb-12 text-center">
