@@ -193,8 +193,8 @@ export default function BookingSection() {
                     {/* Step 2 Fields */}
                     <div className="space-y-2">
                       <Label>Service Type</Label>
-                      <RadioGroup value={serviceType} onValueChange={handleServiceTypeChange} className="grid grid-cols-2 gap-4">
-                        {["cleaning", "power-washing"].map((type) => (
+                      <RadioGroup value={serviceType} onValueChange={handleServiceTypeChange} className="grid grid-cols-3 gap-4">
+                        {["cleaning", "power-washing", "upholstery-shampooing"].map((type, idx) => (
                           <div key={type}>
                             <RadioGroupItem value={type} id={type} className="peer sr-only" />
                             <Label
@@ -202,7 +202,7 @@ export default function BookingSection() {
                               className="flex flex-col items-center justify-center border-2 border-primary/20 rounded-lg p-4 peer-data-[state=checked]:border-primary transition"
                             >
                               <CheckCircle2 className="h-6 w-6 mb-2" />
-                              {type === "cleaning" ? "Cleaning" : "Power Washing"}
+                              {type}
                             </Label>
                           </div>
                         ))}

@@ -9,13 +9,10 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
-	const aboutText = `Beaver Scrubber Cleaning Co. specializes in professional cleaning and power washing services, primarily serving residential properties. We expertly clean beds, pillows, carpets, sofas, and a variety of furniture. Our services also extend to schools, commercial spaces, healthcare facilities, and other work environments. Additionally, we offer power washing solutions to remove algae, mildew, and mold from outdoor surfaces, restoring their original beauty.`;
-
 	return (
 		<section id="about" className="py-20 bg-gray-100">
 			<div className="container mx-auto px-4">
@@ -31,8 +28,11 @@ export default function AboutSection() {
 						About Us
 					</h2>
 					<p className="text-primary/80 text-base md:text-lg max-w-xl mx-auto">
-						Discover who we are and what we stand for at Beaver
-						Scrubber Cleaning Co.
+						Discover who we are and what we stand for at
+						<br />
+						<span className="text-lead font-extrabold underline underline-offset-2 italic">
+							BEAVER SCRUBBER CLEANING CO.
+						</span>
 					</p>
 				</motion.div>
 
@@ -46,35 +46,49 @@ export default function AboutSection() {
 					>
 						<Card className="rounded-2xl shadow-md">
 							<CardHeader>
-								<CardTitle className="text-2xl">
-									Our Story
-								</CardTitle>
+								<CardTitle className="text-2xl">Our Story</CardTitle>
 								<CardDescription className="text-muted-foreground text-sm">
 									Built on quality, trust, and care.
 								</CardDescription>
 							</CardHeader>
 							<CardContent className="space-y-6 text-sm text-gray-700 leading-relaxed">
-								<TextGenerateEffect
-									words={aboutText}
-									className="text-muted-foreground"
-								/>
+								<div>
+									<p>
+										<span className="font-semibold underline underline-offset-2 italic">
+											BEAVER SCRUBBER CLEANING CO.
+										</span>{" "}
+										specializes in professional cleaning,
+										power washing and upholstery shampooing,
+										primarily serving residential properties.
+										We expertly clean beds, pillows, carpets,
+										sofas, and a variety of furniture. Our
+										services also extend to schools, commercial
+										spaces, healthcare facilities, and other
+										work environments. Additionally, we offer
+										power washing solutions to remove algae,
+										mildew, and mold from outdoor surfaces,
+										restoring their original beauty.
+									</p>
+								</div>
 								<Separator />
 								<div>
 									<h3 className="text-lg font-semibold mb-4">
-										Core Values We Live By
+										What “BEAVER” Stands For
 									</h3>
-									<ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-muted-foreground text-sm">
+									<ul className="space-y-3 text-muted-foreground text-sm">
 										{[
-											"Dedication",
-											"Cooperation",
-											"Adaptability",
-											"Resourcefulness",
-											"Environmental Stewardship",
-											"Attention to Detail",
-										].map((value) => (
-											<li key={value} className="flex items-center gap-2">
-												<span className="h-2.5 w-2.5 rounded-full bg-primary"></span>
-												{value}
+											["B", "Belongingness"],
+											["E", "Environmentally Responsible"],
+											["A", "Adaptability"],
+											["V", "Value Creation"],
+											["E", "Excellence"],
+											["R", "Reliability"],
+										].map(([letter, word]) => (
+											<li key={letter+word} className="flex items-center gap-2">
+												<span className="text-blue-500 font-bold text-lg w-6">
+													{letter}
+												</span>
+												<span className="text-sm">{word}</span>
 											</li>
 										))}
 									</ul>
@@ -92,9 +106,7 @@ export default function AboutSection() {
 					>
 						<Card className="rounded-2xl shadow-md">
 							<CardHeader>
-								<CardTitle className="text-2xl">
-									Our Location
-								</CardTitle>
+								<CardTitle className="text-2xl">Our Location</CardTitle>
 								<CardDescription className="text-muted-foreground text-sm">
 									Located in the heart of Lucena City
 								</CardDescription>
@@ -103,8 +115,8 @@ export default function AboutSection() {
 								<div>
 									<p>
 										Our headquarters is located at XJ55+QW4,
-										Quezon Ave., Brgy. Gulang-Gulang, Lucena
-										City, Quezon Province, Philippines.
+										Quezon Avenue, Brgy. Gulang-Gulang, Lucena City,
+										Quezon Province, Philippines.
 									</p>
 									<p className="mt-2">
 										We’re positioned along key highways and
@@ -115,7 +127,7 @@ export default function AboutSection() {
 								</div>
 								<div className="aspect-video overflow-hidden rounded-lg">
 									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.437320654199!2d121.61319217590238!3d13.942083686511854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ddedff9999b413%3A0x7f3c0c4ff5db6f76!2sXJ55%2BQW4!5e0!3m2!1sen!2sph!4v1678532101234!5m2!1sen!2sph"
+										src="https://www.google.com/maps?q=7Q53XJ55%2BQW4&output=embed"
 										width="100%"
 										height="100%"
 										style={{ border: 0 }}

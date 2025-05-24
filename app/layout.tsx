@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Beaver Scrubber Team", url: "https://beaver-scrubber.vercel.app/" }],
   creator: "Beaver Scrubber",
-  themeColor: "#f97316", // matches your orange hover color for branding
   openGraph: {
     title: "Beaver Scrubber | Professional Cleaning & Power Washing Services",
     description:
