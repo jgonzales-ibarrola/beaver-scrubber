@@ -46,6 +46,11 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/blogs" className="text-gray-400 hover:text-blue-600 transition duration-300">
+                  Blogs
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -70,7 +75,7 @@ export default function Footer() {
               <li>
                 <Link href="#" className="text-gray-400 hover:text-blue-600 transition duration-300">
                   Bedroom Cleaning
-                </Link>
+                </Link> 
               </li>
             </ul>
           </div>

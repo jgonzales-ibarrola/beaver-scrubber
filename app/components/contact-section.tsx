@@ -129,7 +129,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="font-semibold text-lg text-white">Our Location</h3>
                 <p className="text-white/80">
-                  XJ55+QW4, Quezon Ave., Brgy. Gulang-Gulang, Lucena City, Quezon Province, Philippines
+                  XJ55+QW4, Quezon Avenue, Barangay. Gulang-Gulang, Lucena City, Quezon Province, Philippines
                 </p>
               </div>
             </Link>

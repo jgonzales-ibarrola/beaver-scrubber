@@ -115,7 +115,7 @@ export default function AboutSection() {
 								<div>
 									<p>
 										Our headquarters is located at XJ55+QW4,
-										Quezon Avenue, Brgy. Gulang-Gulang, Lucena City,
+										Quezon Avenue, Barangay. Gulang-Gulang, Lucena City,
 										Quezon Province, Philippines.
 									</p>
 									<p className="mt-2">
